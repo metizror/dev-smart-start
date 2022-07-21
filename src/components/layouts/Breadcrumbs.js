@@ -5,21 +5,24 @@ class Breadcrumbs extends Component {
     render() {
         return (
             // <div className="breadcrumb-area" style={{ backgroundImage: "url(" + process.env.PUBLIC_URL + "/assets/img/innerbanner.jpg)" }}>
-            <div className="breadcrumb-area" style={{ backgroundImage: "url(" + process.env.PUBLIC_URL + "/assets/img/banner/banner1.jpg)" }}>
-                <div className="overlay overlay-bg" />
-                <div className="container">
-                    <div className="breadcrumb-content">
-                        <h2 class="fs-5">{this.props.breadcrumb.pagename}</h2>
-                        <ul>
-                            <li><Link to="/">Home</Link>
-                            </li>
-                            <li className="active">{this.props.breadcrumb.pagename}</li>
-                        </ul>
+            <div className="pt-4">
+
+                    <div className="breadcrumb-area" style={{ backgroundImage: "url(" + process.env.PUBLIC_URL + "/assets/img/banner/banner1.jpg)" }}>
+                        <div className="overlay overlay-bg" />
+                        <div className="container">
+                            <div className="breadcrumb-content">
+                                <h2 class="fs-5 ">{this.props.breadcrumb.pagename}</h2>
+                                <ul>
+                                    <li><Link to="/">Home</Link>
+                                    </li>
+                                    <li className="redColor">{this.props.breadcrumb.pagename}</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        );
+                );
     }
 }
 
-export default Breadcrumbs;
+                export default Breadcrumbs;
