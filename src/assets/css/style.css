@@ -7009,6 +7009,7 @@ footer .footer-links .contact-info li a span {
   padding: 15px 30px;
   font-size: 14px;
 }
-/* .f24 {
-  background-image: url("../img/f24.jpeg");
-} */
+.testimonia-text {
+  padding-left: 65px;
+  padding-right: 55px;
+}

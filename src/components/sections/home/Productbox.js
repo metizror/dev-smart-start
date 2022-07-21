@@ -67,9 +67,14 @@ class Productbox extends Component {
                     <div className="row">
                         <div className="col-12">
                             <div className="section-header-left">
-                                <h3 className="text-light-black header-title title" style={{ color: "#811524" }}>Coupon 22</h3>
-                                <div className="w-25">
-                                    <img src={process.env.PUBLIC_URL + "/assets/img/logo/newlogo.png"} className="" alt="img" />
+                                {/* <h3 className="text-light-black header-title title" style={{ color: "#811524" }}>Coupon 22</h3> */}
+                                <div className="row">
+                                    <div className="w-25 ">
+                                        <img src={process.env.PUBLIC_URL + "/assets/img/logo/logoCoupon22.png"} className="" alt="img" />
+                                    </div>
+                                    <div className="col p-4 ">
+                                        <p className="redColor">Our classes are led by a team of highly qualified licensed teachers with an extensive academic background and mastery of virtual education. Smart Start USA inspires students to become future leaders, lifelong learners, and critical thinkers responsible for their own choices in life. Our curriculum is academically diverse, rigorous, and helps our students stay motivated while achieving their individual academic goals. In addition, we provide various educational resources such as testing materials, educational software, etc., to meet the unique needs of our learners. Therefore, all our students achieve remarkable test scores and shoot to the top of their classes.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

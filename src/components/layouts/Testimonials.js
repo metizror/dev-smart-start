@@ -29,7 +29,7 @@ class Testimonials extends Component {
                     <div className="row">
                         <div className="col-12">
                             <div className="section-header-left text-center">
-                                <h3 className="text-black header-title">People Say About US</h3>
+                                <h3 className="text-black header-title pl-4">People Say About US</h3>
                             </div>
                         </div>
                     </div>
@@ -39,10 +39,11 @@ class Testimonials extends Component {
                                 {testimonials.map((item, i) => (
                                     <div key={i}>
                                         {getAuthor(item.author).map((author, i) => (
-                                            <div key={i} className="feedback-item-two ">
-                                                <img src={process.env.PUBLIC_URL + "/" + author.image} alt={author.name} />
-                                                <p className="text-black fw-900 no-margin fs-24 font-weight-bold">{item.comment}</p>
-                                                <h5 className="text-black fw-600 no-margin">{author.name}</h5>
+                                            <div key={i} className="feedback-item-two py-20px pr-20px">
+                                                {/* <img src={process.env.PUBLIC_URL + "/" + author.image} alt={author.name} /> */}
+                                                <p className="text-black fw-900 no-margin fs-13 font-weight-bold testimonia-text" >{item.comment}</p>
+                                                <p className="text-black fw-900 no-margin fs-13  font-weight-bold testimonia-text">{item.comment1}</p>
+                                                <h5 className="text-black fw-600 no-margin pl-3">{author.name}</h5>
                                                 <span className="text-black fw-400">{author.address}</span>
                                             </div>
                                         ))}
