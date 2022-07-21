@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Personalized learning",
+    "image": "assets/img/banner/banner1.jpg",
+    "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut aliquid fugiat repellat animi! Officiis quaerat sed, ea illo rerum labore ducimus molestiae eos veritatis, dolor maiores possimus iure quae. "
+  },
+  {
+    "id": 2,
+    "title": "Trusted content",
+    "image": "assets/img/banner/banner2.jpg",
+    "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut aliquid fugiat repellat animi! Officiis quaerat sed, ea illo rerum labore ducimus molestiae eos veritatis, dolor maiores possimus iure quae. "
+  },
+  {
+    "id": 3,
+    "title": "Tools to empower teachers",
+    "image": "assets/img/banner/banner1.jpg",
+    "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ut aliquid fugiat repellat animi! Officiis quaerat sed, ea illo rerum labore ducimus molestiae eos veritatis, dolor maiores possimus iure quae. "
+  }
+]

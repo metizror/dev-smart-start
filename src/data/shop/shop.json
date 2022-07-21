@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "title": "Elementery",
+    "shortdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
+    "image": [
+      "assets/img/shop/elementary.png",
+      "assets/img/shop/middleSchool.png",
+      "assets/img/shop/product3.png",
+      "assets/img/shop/product4.png",
+      "assets/img/shop/product5.png",
+      "assets/img/shop/product6.png"
+    ],
+    "price": 672,
+    "discount": 10,
+    "goal": 70000,
+    "sold": 41000,
+    "category": [1, 2, 3],
+    "tags": [1, 2, 3],
+    "filtercategory": [1, 3],
+    "postdate": "10 May 2021",
+    "sale": true,
+    "stock": true,
+    "rating": 5,
+    "htmldesc": "<p class='mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque.Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam erat mi, rutrum at sollicitudin rhoncusp</p>",
+    "reviews": [
+      {
+        "user": [1],
+        "commentdate": "12 May 2021",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "replies": []
+      },
+      {
+        "user": [2],
+        "commentdate": "11 May 2021",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "replies": [
+          {
+            "user": [3],
+            "commentdate": "12 May 2021",
+            "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Middle School",
+    "shortdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
+    "image": [
+      "assets/img/shop/middleSchool.png",
+      "assets/img/shop/product3.jpg",
+      "assets/img/shop/product4.jpg",
+      "assets/img/shop/product5.jpg",
+      "assets/img/shop/product6.jpg",
+      "assets/img/shop/product7.jpg"
+    ],
+    "price": 631,
+    "discount": 15,
+    "goal": 70000,
+    "sold": 15000,
+    "category": [4, 5, 6],
+    "tags": [4, 5, 6],
+    "filtercategory": [2],
+    "postdate": "10 May 2021",
+    "sale": false,
+    "stock": false,
+    "rating": 4,
+    "htmldesc": "<p class='mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque.Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam erat mi, rutrum at sollicitudin rhoncusp</p>",
+    "reviews": [
+      {
+        "user": [1],
+        "commentdate": "12 May 2021",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "replies": []
+      },
+      {
+        "user": [2],
+        "commentdate": "11 May 2021",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "replies": [
+          {
+            "user": [3],
+            "commentdate": "12 May 2021",
+            "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "HighSchool",
+    "shortdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
+    "image": [
+      "assets/img/shop/highSchool.png",
+      "assets/img/shop/product5.jpg",
+      "assets/img/shop/product6.jpg",
+      "assets/img/shop/product7.jpg",
+      "assets/img/shop/product8.jpg",
+      "assets/img/shop/product9.jpg"
+    ],
+    "price": 245,
+    "discount": 13,
+    "goal": 70000,
+    "sold": 46000,
+    "category": [7, 1, 2],
+    "tags": [7, 8, 9],
+    "filtercategory": [1, 3],
+    "postdate": "10 May 2021",
+    "sale": false,
+    "stock": true,
+    "rating": 4,
+    "htmldesc": "<p class='mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque.Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam erat mi, rutrum at sollicitudin rhoncusp</p>",
+    "reviews": [
+      {
+        "user": [1],
+        "commentdate": "12 May 2021",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "replies": []
+      },
+      {
+        "user": [2],
+        "commentdate": "11 May 2021",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "replies": [
+          {
+            "user": [3],
+            "commentdate": "12 May 2021",
+            "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Home Schooling",
+    "shortdesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
+    "image": [
+      "assets/img/shop/homeSchool.png",
+      "assets/img/shop/product4.jpg",
+      "assets/img/shop/product5.jpg",
+      "assets/img/shop/product6.jpg",
+      "assets/img/shop/product7.jpg",
+      "assets/img/shop/product8.jpg"
+    ],
+    "price": 785,
+    "discount": "",
+    "goal": 70000,
+    "sold": 25000,
+    "category": [3, 4, 5],
+    "tags": [10, 11, 12],
+    "filtercategory": [2],
+    "postdate": "10 May 2021",
+    "sale": false,
+    "stock": true,
+    "rating": 4,
+    "htmldesc": "<p class='mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque.Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam erat mi, rutrum at sollicitudin rhoncusp</p>",
+    "reviews": [
+      {
+        "user": [1],
+        "commentdate": "12 May 2021",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "replies": []
+      },
+      {
+        "user": [2],
+        "commentdate": "11 May 2021",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "replies": [
+          {
+            "user": [3],
+            "commentdate": "12 May 2021",
+            "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          }
+        ]
+      }
+    ]
+  }
+  
+]

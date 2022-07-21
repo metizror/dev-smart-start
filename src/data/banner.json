@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "assets/img/banner/banner1.jpg",
+    "title": "Smart<span class='text-dark-redssss'> Start </span> USA",
+
+    "subtitle": "The <span class='text-dark-red'> Best Educational</span> Brand",
+    "text": "",
+    "position": "col-lg-12",
+    "extraclass": "right-side-content far-right",
+    "newClass": ""
+  },
+  {
+    "id": 2,
+    "image": "assets/img/banner/banner2.jpg",
+    "title": "Discover our <span className='text-dark-red'>reimagined</span> Gallery",
+    "subtitle": "Around the world.",
+    "text": "",
+    "position": "col-lg-8",
+    "extraclass": "right-side-contents text-center title-font",
+    "newClass": "title-font"
+  }
+]
