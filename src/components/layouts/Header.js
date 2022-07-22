@@ -5,6 +5,9 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import navigationmenu from '../../data/navigation.json';
 import { Button, Dropdown, DropdownButton, Form } from 'react-bootstrap';
 import UserContext from '../../Context/UserContext';
+import emailjs from '@emailjs/browser';
+import { AxisConstantLineStyle } from 'devextreme-react/chart';
+import axios from 'axios';
 // import { OffcanvasProvider, Trigger, Offcanvas } from 'react-simple-offcanvas'
 // import { GetStartedSlider } from './GetStartedSlider';
 
@@ -16,6 +19,12 @@ class Header extends HeaderComponent {
 
     state = {
         scheduleModalIsOpen: false,
+        fname: "cxvxcv",
+        lname: "cxvxcv",
+        email: "",
+        phoneNumber: "",
+        age: 0,
+        childGrade: 0,
     }
 
     // const
@@ -35,14 +44,17 @@ class Header extends HeaderComponent {
         console.log(item);
 
         return window.location.href = item.link;
-        
+
     }
     addsubMenuNewLinkHandlerThird(item) {
         return window.location.href = item;
     }
 
+
+
     render() {
-        console.log("-----------", this.context);
+        const { lname, fname, email, phoneNumber, age, childGrade } = this.state
+        // console.log("-----------", this.context);
         const { user, setUser } = this.context
         console.log(user.isModalOpen);
 
@@ -54,14 +66,49 @@ class Header extends HeaderComponent {
         const isModalIsOpen = user.isModalOpen
         // const isModalIsOpen = this.state.toggleModal
         const scheduleToggle = this.state.scheduleToggle
-        const addNewLinkHandler = (item) => {
-            debugger
-            console.log("_____________________________", item);
-            if (item.link) {
-                return window.location.href = item.link
-            } else {
-                return;
+        // const addNewLinkHandler = (item) => {
+        //     debugger
+        //     if (item.link) {
+        //         return window.location.href = item.link
+        //     } else {
+        //         return;
+        //     }
+        // }
+        console.log("_____________________________", childGrade);
+        const submitHandler = (e) => {
+            e.preventDefault();
+            console.log("-------------------------", lname, fname, email,
+                phoneNumber,
+                age,
+                childGrade);
+            console.log(e.target);
+            var templateParams = {
+                lname
+                , fname, email,
+                phoneNumber,
+                age,
+                childGrade
             }
+            // axios.post('https://api.emailjs.com/api/v1.0/takraj184@gmail.com/send', {
+            //     lname, fname, email,
+            //     phoneNumber,
+            //     age,
+            //     childGrade
+            // }).then((response) => {  console.log("--------the response:", response); }).catch(error => console.error())
+
+            // emailjs.send('gmail', 'template_922ywtc', 'sgadmin@smartstartus.com', 'j_NxL-WuC0z0_NUKi')
+            // emailjs.send('gmailId', 'template_922ywtc', '{data}', 'j_NxL-WuC0z0_NUKi')
+            emailjs.sendForm("service_1b8b9am", "template_xuuq1jl",
+                e.target, 'j_NxL-WuC0z0_NUKi'
+                // emailjs.sendForm("service_1b8b9am","template_xuuq1jl",
+                //     e.target, 'j_NxL-WuC0z0_NUKi'
+                // email_id: "abhinav.prajapati@metizsoft.com",
+            ).then(function (response) {
+                // console.log('----------------------------------------------------SUCCESS!', response);
+                console.log('SUCCESS!', response, response.status, response.text);
+            }, function (error) {
+                console.log('FAILED...', error);
+            });
         }
         return (
             // <header className="header sticky">
@@ -123,49 +170,65 @@ class Header extends HeaderComponent {
                                             <div className="parent-div-modal"  >
                                                 <div className='sub-div-modals is-open' >
                                                     <div className={isModalIsOpen ? 'open' : 'form-div '}   >
-                                                        <Form className="form">
-                                                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                                                        <script type="text/javascript">
+                                                            emailjs.init('j_NxL-WuC0z0_NUKi')
+                                                        </script>
+                                                        <Form className="form" id="contact-form" onSubmit={submitHandler}>
+                                                            <Form.Group className="mb-3" >
                                                                 <Form.Label>Schedule an evaluation
                                                                     Meet with our faculty and identify the proper
                                                                     course level for your child.</Form.Label>
                                                             </Form.Group>
 
-                                                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                                                <Form.Control type="text" placeholder="FirstName" />
-                                                            </Form.Group>
-                                                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                                                <Form.Control type="text" placeholder="LastName" />
-                                                            </Form.Group>
-                                                            <Form.Group className="mb-3" controlId="formBasicPassword">
-
-                                                                <Form.Control type="email" placeholder="Enter email" />
-                                                            </Form.Group>
-                                                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                                                <Form.Control type="number" placeholder="Phone Number" />
-                                                            </Form.Group>
-                                                           
                                                             <Form.Group className="mb-3">
-                                                                <Form.Control type="number " placeholder="Child Age" />
+                                                                <Form.Control name="fname" type="text" id="fname" placeholder="FirstName" value={fname} onChange={(e) => this.setState({ fname: e.target.value })} />
+                                                            </Form.Group>
+                                                            <Form.Group className="mb-3" >
+                                                                <Form.Control type="text" name="lname" id="lname" placeholder="LastName" value={lname} onChange={(e) => this.setState({ lname: e.target.value })} />
+                                                            </Form.Group>
+                                                            <Form.Group className="mb-3"   >
+
+                                                                <Form.Control type="email" name="email" id="email" placeholder="Enter email" value={email} onChange={(e) => this.setState({ email: e.target.value })} />
+                                                            </Form.Group>
+                                                            <Form.Group className="mb-3" >
+                                                                <Form.Control type="number" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" value={phoneNumber} onChange={(e) => this.setState({ phoneNumber: e.target.value })} />
+                                                            </Form.Group>
+
+                                                            <Form.Group className="mb-3">
+                                                                <Form.Control type="number " name="age" id="age" placeholder="Child Age" value={age} onChange={(e) => this.setState({ age: e.target.value })} />
                                                             </Form.Group>
                                                             {/* <Form.Text > */}
                                                             <Form.Text className="d-flex flex-row custom_child_grad" placement="right">
-                                                                <DropdownButton title="Child Grade" variant="success">
-                                                                    <Dropdown.Item href="#/action-3">3</Dropdown.Item>
-                                                                    <Dropdown.Item href="#/action-4">4</Dropdown.Item>
-                                                                    <Dropdown.Item href="#/action-5">5</Dropdown.Item>
-                                                                    <Dropdown.Item href="#/action-6">6</Dropdown.Item>
-                                                                    <Dropdown.Item href="#/action-7">7</Dropdown.Item>
-                                                                    <Dropdown.Item href="#/action-7">8</Dropdown.Item>
-                                                                    <Dropdown.Item href="#/action-7">9</Dropdown.Item>
-                                                                    <Dropdown.Item href="#/action-7">10</Dropdown.Item>
-                                                                    <Dropdown.Item href="#/action-7">11</Dropdown.Item>
-                                                                    <Dropdown.Item href="#/action-7">12</Dropdown.Item>
-                                                                </DropdownButton>
+                                                                {/* <DropdownButton title="Child Grade" name='grade' id="grade" variant="success" onSelect={(e) => this.setState({ childGrade: e })} >
+                                                                    <Dropdown.Item eventKey="3">3</Dropdown.Item>
+                                                                    <Dropdown.Item eventKey="4">4</Dropdown.Item>
+                                                                    <Dropdown.Item eventKey="5">5</Dropdown.Item>
+                                                                    <Dropdown.Item eventKey="6">6</Dropdown.Item>
+                                                                    <Dropdown.Item eventKey="7">7</Dropdown.Item>
+                                                                    <Dropdown.Item eventKey="8">8</Dropdown.Item>
+                                                                    <Dropdown.Item eventKey="9">9</Dropdown.Item>
+                                                                    <Dropdown.Item eventKey="10">10</Dropdown.Item>
+                                                                    <Dropdown.Item eventKey="11">11</Dropdown.Item>
+                                                                    <Dropdown.Item eventKey="12">12</Dropdown.Item>
+                                                                </DropdownButton> */}
+                                                                {/* <label htmlFor="">Choose child age :</label> */}
+                                                                <select id="grade" name='grade' placeholder='Child ' value={childGrade} className="p-2" style={{ backgroundColor: "#28a745", color: "white", borderRadius: "5px" }} onChange={(e) => this.setState({ childGrade: e.target.value })}>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="6">6</option>
+                                                                    <option value="7">7</option>
+                                                                    <option value="8">8</option>
+                                                                    <option value="9">9</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="11">11</option>
+                                                                    <option value="12">12</option>
 
+                                                                </select>
                                                             </Form.Text>
-
-
-                                                            <Button variant="success" className='mt-4'>SUBMIT</Button>
+                                                            <Button type="submit" variant="success" className='mt-4'>SUBMIT</Button>
                                                         </Form>
                                                         <span class="border-width-line"></span>
 
@@ -173,13 +236,13 @@ class Header extends HeaderComponent {
                                                     </div>
                                                 </div>
                                             </div>
-                                          
+
                                         </ul>
                                         <div className='get-started-btn'  >
                                             <a href="https://school.smartstartus.com/catalog">
                                                 <Button variant="success" style={{ padding: "17px" }} className={isModalIsOpen ? 'open' : ''} ref={this.state.toggleModal}>Register Now</Button>
                                             </a>
-                                           
+
                                         </div>
                                     </nav>
 

@@ -7,13 +7,16 @@
     "node": "16.14.0"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.27.2",
     "bootstrap": "^4.6.1",
     "classnames": "^2.3.1",
     "devextreme": "^20.2.7",
     "devextreme-react": "^20.2.7",
+    "emailjs-com": "^3.2.0",
     "jquery": "^3.6.0",
     "magnific-popup": "^1.1.0",
     "react": "^17.0.2",
