@@ -56,7 +56,6 @@ class Header extends HeaderComponent {
         const { lname, fname, email, phoneNumber, age, childGrade } = this.state
         // console.log("-----------", this.context);
         const { user, setUser } = this.context
-        console.log(user.isModalOpen);
 
         const stickyheader = this.state.isTop ? 'sticky' : '';
         const scrollable = window.pageYOffset;
@@ -74,21 +73,29 @@ class Header extends HeaderComponent {
         //         return;
         //     }
         // }
-        console.log("_____________________________", childGrade);
+        const clearDataHandler = () => {
+            // console.log("-------------------------", lname, fname, email,
+            //     phoneNumber,
+            //     age,
+            //     childGrade);
+            this.setState({ lname: "" })
+            this.setState({ fname: "" })
+            this.setState({ email: "" })
+            this.setState({ phoneNumber: "" })
+            this.setState({ age: "" })
+            this.setState({ childGrade: "" })
+        }
+
         const submitHandler = (e) => {
             e.preventDefault();
-            console.log("-------------------------", lname, fname, email,
-                phoneNumber,
-                age,
-                childGrade);
-            console.log(e.target);
-            var templateParams = {
-                lname
-                , fname, email,
-                phoneNumber,
-                age,
-                childGrade
-            }
+            // console.log(e.target);
+            // var templateParams = {
+            //     lname
+            //     , fname, email,
+            //     phoneNumber,
+            //     age,
+            //     childGrade
+            // }
             // axios.post('https://api.emailjs.com/api/v1.0/takraj184@gmail.com/send', {
             //     lname, fname, email,
             //     phoneNumber,
@@ -105,6 +112,7 @@ class Header extends HeaderComponent {
                 // email_id: "abhinav.prajapati@metizsoft.com",
             ).then(function (response) {
                 // console.log('----------------------------------------------------SUCCESS!', response);
+                clearDataHandler()
                 console.log('SUCCESS!', response, response.status, response.text);
             }, function (error) {
                 console.log('FAILED...', error);
@@ -215,6 +223,7 @@ class Header extends HeaderComponent {
                                                                 </DropdownButton> */}
                                                                 {/* <label htmlFor="">Choose child age :</label> */}
                                                                 <select id="grade" name='grade' placeholder='Child ' value={childGrade} className="p-2" style={{ backgroundColor: "#28a745", color: "white", borderRadius: "5px" }} onChange={(e) => this.setState({ childGrade: e.target.value })}>
+                                                                    <option value="" >Select Child Grade </option>
                                                                     <option value="3">3</option>
                                                                     <option value="4">4</option>
                                                                     <option value="5">5</option>
